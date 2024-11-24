@@ -63,14 +63,12 @@ section[class="one"] {
     width: 80cqw;
     height: 100px;
     grid-template-columns: 30fr auto;
-
 }
 
 section[class="two"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 80cqw;
-    height: 50cqh;
 }
 
 section[class="b"] {

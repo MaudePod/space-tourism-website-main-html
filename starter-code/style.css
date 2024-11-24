@@ -1,0 +1,274 @@
+@import url("./styles/base.css") layer(base);
+@import url("./styles/destination.css") layer(destination);
+@import url("./styles/technology.css") layer(technology);
+@import url("./styles/crew.css") layer(crew);
+
+
+section[class="home-aside"] {
+    font-size: 3em;
+    color: black;
+    border-radius: 50%;
+    background: white;
+    padding: 100px 50px 100px 50px;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+div[class="attribution"]{
+    position: absolute;
+    bottom: 5px;
+    left:0;
+    right: 0;
+    margin:0 auto;
+    display: flex;
+    place-content: center;
+    font-size: small;
+}
+body:has(input[id="home"]:checked) {
+    main {
+        background: url(./assets/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    section[class="part-2"] {
+        font-size: 3em;
+    }
+
+    section[class="a"] {
+        --content-height: 40cqh;
+        order: 1;
+        padding-bottom: 2cqh;
+
+    }
+
+    section[class="b"] {
+        --content-height: 40cqh;
+        order: 2;
+    }
+
+    label[for="home"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    article[class="home-article"],
+    section[class="home-aside"] {
+        display: grid;
+    }
+
+    section[class="a"] article:not(article[class="home-article"]) {
+        display: none;
+    }
+
+    section[class="home-aside"] {
+        font-size: 3em;
+        color: black;
+        border-radius: 50%;
+        background: white;
+        padding: 100px 50px 100px 50px;
+    }
+
+    section[class="b"] section:not(section[class="home-aside"]) {
+        display: none;
+    }
+
+}
+
+body:has(input[id="destination"]:checked) {
+    main {
+        background: url(./assets/destination/background-destination-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    label[for="destination"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    section[class="destination-menu"] {
+        display: grid;
+        padding-bottom: 20px;
+    }
+}
+
+body:has(input[id="crew"]:checked) {
+    main {
+        background: url(./assets/crew/background-crew-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    label[for="crew"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    section[class="crew-menu"] {
+        display: grid;
+    }
+}
+
+body:has(input[id="technology"]:checked) {
+    main {
+        background: url(./assets/technology/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    label[for="technology"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+}
+
+@container main (inline-size < 1200px) {
+
+    body:has(input[id="mobile-hamburger"]:checked) {
+        label[for="mobile-hamburger"] {
+            display: none;
+        }
+
+        nav[class="menu"] {
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr;
+            top: 75%;
+            height: auto;
+            row-gap: 20px;
+            padding: 30%;
+        }
+
+        section[class="two"] {
+            filter: opacity(0.5);
+            user-select: none;
+        }
+
+        section[class="one"] {
+            margin-bottom: 400px;
+        }
+
+        label[for="home"],
+        label[for="destination"],
+        label[for="crew"],
+        label[for="technology"] {
+            text-underline-offset: auto;
+        }
+    }
+
+    body:has(input[id="mobile-close"]:checked) {
+        label[for="mobile-close"] {
+            display: none;
+        }
+    }
+}
+
+@container body (inline-size < 1200px) and (inline-size >700px) {
+    body:has(input[id="mobile-hamburger"]:checked) {
+        nav[class="menu"] {
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr;
+            top: 75%;
+            height: auto;
+            row-gap: 20px;
+            padding: 40%;
+        }
+        section[class="two"] {
+            display: none;
+        }
+    }
+}
+
+@container body (inline-size < 1200px) {
+    nav[class="menu"] {
+        display: none;
+    }
+
+    nav[class="mobile-menu"] {
+        display: grid;
+    }
+
+    body:has(input[id="home"]:checked) {
+        main {
+            background: url(./assets/home/background-home-tablet.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    body:has(input[id="destination"]:checked) {
+        main {
+            background: url(./assets/destination/background-destination-tablet.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    body:has(input[id="crew"]:checked) {
+        main {
+            background: url(./assets/crew/background-crew-tablet.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    body:has(input[id="technology"]:checked) {
+        main {
+            background: url(./assets/technology/background-technology-tablet.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@container body (inline-size < 600px) {
+    body:has(input[id="home"]:checked) {
+        main {
+            background: url(./assets/home/background-home-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    body:has(input[id="destination"]:checked) {
+        main {
+            background: url(./assets/destination/background-destination-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    body:has(input[id="crew"]:checked) {
+        main {
+            background: url(./assets/crew/background-crew-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    body:has(input[id="technology"]:checked) {
+        main {
+            background: url(./assets/technology/background-technology-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@container main (inline-size < 800px) {}

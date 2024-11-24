@@ -1,0 +1,165 @@
+section[class="technology-menu"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    place-items: center;
+}
+
+label[for="space-1"],
+label[for="space-2"],
+label[for="space-3"] {
+    display: grid;
+    place-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+body:has(input[id="space-1"]:checked) label[for="space-1"],
+body:has(input[id="space-2"]:checked) label[for="space-2"],
+body:has(input[id="space-3"]:checked) label[for="space-3"] {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    height: 55px;
+    width: 55px;
+}
+
+section[class="technology-card-info"] section[class="part-1"] {
+    color: grey;
+    font-size: 1.2em;
+
+}
+
+section[class="technology-card-info"] section[class="part-2"] {
+    font-size: 3em;
+    text-wrap: nowrap;
+}
+
+section[class="technology-card-info"] section[class="part-3"] {
+    color: grey;
+    font-size: 1.2em;
+}
+
+input[name="technology-menu"] {
+    display: none;
+}
+
+section[class="technolgy-card"] {
+    display: grid;
+    grid-template-columns: 15fr 85fr;
+    column-gap: 10px;
+}
+
+span[class="technology-header"] {
+    display: flex;
+    font-size: 2em;
+    width: 100%;
+    column-gap: 10px;
+}
+
+span[class="header-prefix"] {
+    color: gray;
+}
+
+span[class="header-text"] {
+    font-weight: 900;
+}
+
+article[class="technology-article-vehicle"],
+section[class="technology-image-vehicle"],
+article[class="technology-article-spaceport"],
+section[class="technology-image-spaceport"],
+article[class="technology-article-capsule"],
+section[class="technology-image-capsule"] {
+    width: var(--content-width, 500px);
+    height: var(--content-height, 600px);
+}
+
+body:has(input[id="technology"]:checked):has(input[id="space-1"]:checked) {
+    article[class="technology-article-vehicle"] {
+        display: grid;
+    }
+
+    section[class="technology-image-vehicle"] {
+        display: grid;
+    }
+}
+
+body:has(input[id="technology"]:checked):has(input[id="space-2"]:checked) {
+    article[class="technology-article-spaceport"] {
+        display: grid;
+    }
+
+    section[class="technology-image-spaceport"] {
+        display: grid;
+    }
+}
+
+body:has(input[id="technology"]:checked):has(input[id="space-3"]:checked) {
+    article[class="technology-article-capsule"] {
+        display: grid;
+    }
+
+    section[class="technology-image-capsule"] {
+        display: grid;
+    }
+}
+
+@container main (inline-size < 1000px) {
+    span[class="technology-header"] {
+        display: none;
+    }
+
+    section[class="technology-menu"] {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        place-items: center;
+        place-self: center;
+    }
+
+    section[class="technolgy-card"] {
+        grid-template-columns: 1fr;
+    }
+
+    section[class="a"] {
+        /* --content-height: 40cqh; */
+        --content-height: auto;
+        order: 2;
+        margin-bottom: 50px;
+    }
+
+    section[class="b"] {
+        /* --content-height: 40cqh; */
+        --content-height: auto;
+        order: 1;
+        padding-bottom: 2cqh;
+    }
+
+    section[class="technology-card-info"] section[class="part-2"] {
+        font-size: 2em;
+        text-wrap: nowrap;
+    }
+
+    label[for="space-1"],
+    label[for="space-2"],
+    label[for="space-3"] {
+        height: 35px;
+        width: 35px;
+    }
+
+    body:has(input[id="space-1"]:checked) label[for="space-1"],
+    body:has(input[id="space-2"]:checked) label[for="space-2"],
+    body:has(input[id="space-3"]:checked) label[for="space-3"] {
+        height: 45px;
+        width: 45px;
+    }
+}

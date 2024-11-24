@@ -1,0 +1,382 @@
+input[name="crew-menu"] {
+    appearance: none;
+    border: 1px grey solid;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: grey;
+    cursor: pointer;
+}
+
+input[name="crew-menu"]:checked {
+    background: white;
+    height: 20px;
+    width: 20px;
+}
+
+span[class="crew-header"] {
+    display: flex;
+    font-size: 2em;
+    width: 100%;
+    column-gap: 10px;
+}
+
+span[class="header-prefix"] {
+    color: gray;
+}
+
+span[class="header-text"] {
+    font-weight: 900;
+}
+
+article[class="crew-article-commander"] section[class="part-1"],
+article[class="crew-article-engineer"] section[class="part-1"],
+article[class="crew-article-pilot"] section[class="part-1"],
+article[class="crew-article-specialist"] section[class="part-1"] {
+    color: grey;
+    font-size: 2em;
+
+}
+
+article[class="crew-article-commander"] section[class="part-2"],
+article[class="crew-article-engineer"] section[class="part-2"],
+article[class="crew-article-pilot"] section[class="part-2"],
+article[class="crew-article-specialist"] section[class="part-2"] {
+    font-size: 3em;
+    text-wrap: nowrap;
+}
+
+article[class="crew-article-commander"] section[class="part-3"],
+article[class="crew-article-engineer"] section[class="part-3"],
+article[class="crew-article-pilot"] section[class="part-3"],
+article[class="crew-article-specialist"] section[class="part-3"] {
+    color: grey;
+}
+
+section[class="crew-image-commander"],
+section[class="crew-image-engineer"],
+section[class="crew-image-pilot"],
+section[class="crew-image-specialist"] {
+    width: var(--content-width, 500px);
+    height: var(--content-height, 600px);
+}
+
+body:has(input[id="crew"]:checked):has(input[id="commander"]:checked) {
+    article[class="crew-article-commander"] {
+        display: grid;
+    }
+
+    section[class="crew-image-commander"] {
+        display: grid;
+    }
+
+    section[class="crew-menu"] {
+        grid-template-columns: repeat(4, 30px);
+        place-items: center;
+        width: 100%;
+        column-gap: 5px;
+        margin-left: 15%;
+    }
+}
+
+body:has(input[id="crew"]:checked):has(input[id="engineer"]:checked) {
+    article[class="crew-article-engineer"] {
+        display: grid;
+    }
+
+    section[class="crew-image-engineer"] {
+        display: grid;
+    }
+
+    section[class="crew-menu"] {
+        grid-template-columns: repeat(4, 30px);
+        place-items: center;
+        width: 100%;
+        column-gap: 5px;
+        margin-left: 15%;
+    }
+}
+
+body:has(input[id="crew"]:checked):has(input[id="pilot"]:checked) {
+    article[class="crew-article-pilot"] {
+        display: grid;
+    }
+
+    section[class="crew-image-pilot"] {
+        display: grid;
+    }
+
+    section[class="crew-menu"] {
+        grid-template-columns: repeat(4, 30px);
+        place-items: center;
+        width: 100%;
+        column-gap: 5px;
+        margin-left: 15%;
+    }
+}
+
+body:has(input[id="crew"]:checked):has(input[id="specialist"]:checked) {
+    article[class="crew-article-specialist"] {
+        display: grid;
+    }
+
+    section[class="crew-image-specialist"] {
+        display: grid;
+    }
+
+    section[class="crew-menu"] {
+        grid-template-columns: repeat(4, 30px);
+        place-items: center;
+        width: 100%;
+        column-gap: 5px;
+        margin-left: 15%;
+    }
+}
+
+@container main (inline-size < 1000px) {
+
+    span[class="crew-header"] {
+        display: none;
+    }
+
+    section[class="part-1"] {
+        margin-top: 2cqh;
+    }
+
+    article[class="crew-article-commander"] section[class="part-1"],
+    article[class="crew-article-engineer"] section[class="part-1"],
+    article[class="crew-article-pilot"] section[class="part-1"],
+    article[class="crew-article-specialist"] section[class="part-1"] {
+        font-size: 1.5em;
+    }
+
+    article[class="crew-article-commander"] section[class="part-2"],
+    article[class="crew-article-engineer"] section[class="part-2"],
+    article[class="crew-article-pilot"] section[class="part-2"],
+    article[class="crew-article-specialist"] section[class="part-2"] {
+        font-size: 2em;
+    }
+
+    article[class="crew-article-commander"] section[class="part-3"],
+    article[class="crew-article-engineer"] section[class="part-3"],
+    article[class="crew-article-pilot"] section[class="part-3"],
+    article[class="crew-article-specialist"] section[class="part-3"] {
+        width: 125%;
+        text-wrap-style: balance;
+        margin: auto 0 auto -20px;
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="commander"]:checked) {
+        section[class="two"] {
+            height: 100cqh;
+        }
+
+        article[class="crew-article-commander"] {
+            place-items: center;
+            order: 2;
+        }
+
+        section[class="crew-image-commander"] {
+            place-items: center;
+            width: 80%;
+        }
+
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 1;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 2;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 1;
+            padding-bottom: 2cqh;
+        }
+
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="engineer"]:checked) {
+        section[class="two"] {
+            height: 100cqh;
+        }
+
+        article[class="crew-article-engineer"] {
+            place-items: center;
+            order: 2;
+        }
+
+        section[class="crew-image-engineer"] {
+            place-items: center;
+            width: 80%;
+        }
+
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 1;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 2;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 1;
+            padding-bottom: 2cqh;
+        }
+
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="pilot"]:checked) {
+        section[class="two"] {
+            height: 100cqh;
+        }
+
+        article[class="crew-article-pilot"] {
+            place-items: center;
+            order: 2;
+        }
+
+        section[class="crew-image-pilot"] {
+            place-items: center;
+            width: 80%;
+        }
+
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 1;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 2;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 1;
+            padding-bottom: 2cqh;
+        }
+
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="specialist"]:checked) {
+        section[class="two"] {
+            height: 100cqh;
+        }
+
+        article[class="crew-article-specialist"] {
+            place-items: center;
+            order: 2;
+        }
+
+        section[class="crew-image-specialist"] {
+            place-items: center;
+            width: 80%;
+        }
+
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 1;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 2;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 1;
+            padding-bottom: 2cqh;
+        }
+
+    }
+}
+
+@container body (inline-size < 1200px) and (inline-size >700px) {
+    body:has(input[id="crew"]:checked):has(input[id="commander"]:checked) {
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 3;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 1;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 2;
+            padding-bottom: 2cqh;
+        }
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="engineer"]:checked) {
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 3;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 1;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 2;
+            padding-bottom: 2cqh;
+        }
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="pilot"]:checked) {
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 3;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 1;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 2;
+            padding-bottom: 2cqh;
+        }
+    }
+
+    body:has(input[id="crew"]:checked):has(input[id="specialist"]:checked) {
+        section[class="crew-menu"] {
+            place-content: center;
+            order: 3;
+            margin: 0;
+        }
+
+        section[class="a"] {
+            --content-height: 40cqh;
+            order: 1;
+        }
+
+        section[class="b"] {
+            --content-height: 40cqh;
+            order: 2;
+            padding-bottom: 2cqh;
+        }
+    }
+}

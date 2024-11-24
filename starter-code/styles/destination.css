@@ -1,0 +1,221 @@
+span[class="destination-header"] {
+    display: flex;
+    font-size: 2em;
+    column-gap: 10px;
+}
+
+span[class="header-prefix"] {
+    color: gray;
+}
+
+span[class="header-text"] {
+    font-weight: 900;
+}
+
+article[class="destination-article-moon"] section[class="part-1"],
+article[class="destination-article-mars"] section[class="part-1"],
+article[class="destination-article-europa"] section[class="part-1"],
+article[class="destination-article-titan"] section[class="part-1"] {
+    font-size: 8em;
+}
+
+article[class="destination-article-moon"] section[class="part-2"],
+article[class="destination-article-mars"] section[class="part-2"],
+article[class="destination-article-europa"] section[class="part-2"],
+article[class="destination-article-titan"] section[class="part-2"] {
+    font-size: 1.2em;
+    border-bottom: 3px solid #fff5;
+    margin-bottom: 20px;
+}
+
+article[class="destination-article-moon"] section[class="part-3"],
+article[class="destination-article-mars"] section[class="part-3"],
+article[class="destination-article-europa"] section[class="part-3"],
+article[class="destination-article-titan"] section[class="part-3"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section[class="detail-left"],
+section[class="detail-right"] {
+    display: grid;
+    row-gap: 20px;
+}
+
+section[class="detail-left"] section:nth-of-type(2),
+section[class="detail-right"] section:nth-child(2) {
+    font-size: 2em;
+}
+
+body:has(input[id="destination"]:checked):has(input[id="moon"]:checked) {
+    label[for="moon"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    article[class="destination-article-moon"] {
+        height: 100%;
+        display: grid;
+    }
+
+    section[class="destination-image-moon"] {
+        display: grid;
+        height: 100%;
+    }
+
+    section[class="destination-menu"] {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
+
+body:has(input[id="destination"]:checked):has(input[id="mars"]:checked) {
+    label[for="mars"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    article[class="destination-article-mars"] {
+        height: 100%;
+        display: grid;
+    }
+
+    section[class="destination-image-mars"] {
+        display: grid;
+        height: 100%;
+    }
+
+    section[class="destination-menu"] {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
+
+body:has(input[id="destination"]:checked):has(input[id="europa"]:checked) {
+    label[for="europa"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    article[class="destination-article-europa"] {
+        height: 100%;
+        display: grid;
+    }
+
+    section[class="destination-image-europa"] {
+        display: grid;
+        height: 100%;
+    }
+
+    section[class="destination-menu"] {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
+
+body:has(input[id="destination"]:checked):has(input[id="titan"]:checked) {
+    label[for="titan"] {
+        text-underline-offset: 310%;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    article[class="destination-article-titan"] {
+        height: 100%;
+        display: grid;
+    }
+
+    section[class="destination-image-titan"] {
+        display: grid;
+        height: 100%;
+    }
+
+    section[class="destination-menu"] {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
+
+
+@container main (inline-size < 1000px) {
+    span[class="destination-header"] {
+        display: none;
+    }
+
+    article[class="destination-article-moon"] section[class="part-1"],
+    article[class="destination-article-mars"] section[class="part-1"],
+    article[class="destination-article-europa"] section[class="part-1"],
+    article[class="destination-article-titan"] section[class="part-1"] {
+        font-size: 4em;
+    }
+
+    article[class="destination-article-moon"] section[class="part-2"],
+    article[class="destination-article-mars"] section[class="part-2"],
+    article[class="destination-article-europa"] section[class="part-2"],
+    article[class="destination-article-titan"] section[class="part-2"] {
+        font-size: 1.2em;
+        border-bottom: 3px solid #fff5;
+        margin-bottom: 20px;
+        padding: 20px 0 20px 0;
+
+    }
+
+    article[class="destination-article-moon"] section[class="part-3"],
+    article[class="destination-article-mars"] section[class="part-3"],
+    article[class="destination-article-europa"] section[class="part-3"],
+    article[class="destination-article-titan"] section[class="part-3"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    section[class="detail-left"],
+    section[class="detail-right"] {
+        display: grid;
+        row-gap: 20px;
+    }
+
+    section[class="detail-left"] section:nth-of-type(2),
+    section[class="detail-right"] section:nth-child(2) {
+        font-size: 2em;
+    }
+
+    body:has(input[id="destination"]:checked):has(input[id="moon"]:checked) {
+        label[for="moon"] {
+            text-underline-offset: 10%;
+        }
+    }
+
+    body:has(input[id="destination"]:checked):has(input[id="mars"]:checked) {
+        label[for="mars"] {
+            text-underline-offset: 10%;
+        }
+    }
+
+    body:has(input[id="destination"]:checked):has(input[id="europa"]:checked) {
+        label[for="europa"] {
+            text-underline-offset: 10%;
+        }
+    }
+
+    body:has(input[id="destination"]:checked):has(input[id="titan"]:checked) {
+        label[for="titan"] {
+            text-underline-offset: 10%;
+        }
+    }
+}

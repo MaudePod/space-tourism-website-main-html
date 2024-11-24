@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+    <section class="one">
+      <section class="logo">
+        <svg>
+          <use href="#logo" />
+        </svg>
+      </section>
+      <nav class="menu">
+        <label for="home">
+          00 Home
+          <input type="radio" name="menu" id="home" checked>
+        </label>
+        <label for="destination">
+          01 Destination
+          <input type="radio" name="menu" id="destination">
+        </label>
+        <label for="crew">
+          02 Crew
+          <input type="radio" name="menu" id="crew">
+        </label>
+        <label for="technology">
+          03 Technology
+          <input type="radio" name="menu" id="technology">
+        </label>
+      </nav>
+    <nav class="mobile-menu">
+      <label for="mobile-hamburger">
+        <svg class="hamburger">
+          <use href="#hamburger"/>
+        </svg>
+        <input type="radio" name="mobile-menu" id="mobile-hamburger" >
+      </label>
+      <label for="mobile-close">
+        <svg class="close">
+          <use href="#close"/>
+        </svg>
+        <input type="radio" name="mobile-menu" id="mobile-close" checked>
+      </label>
+    </nav>
+    
+
+    </section>
+    <section class="two">
+      <section class="a">
+        <article class="home-article">
+          <section class="part-1">
+            So, you want to travel to
+          </section>
+          <section class="part-2">
+            Space
+          </section>
+          <section class="part-3">
+            Let’s face it; if you want to go to space, you might as well genuinely go to
+            outer space and not hover kind of on the edge of it. Well sit back, and relax
+            because we’ll give you a truly out of this world experience!
+          </section>
+        </article>
+        <article class="destination-article">
+          <section class="part-1"></section>
+          <section class="part-2"></section>
+          <section class="part-3"></section>
+        </article>
+        <section class="destination-image-moon">
+          <span class="destination-header">
+            <span class="header-prefix">01</span>
+            <span class="header-text">Pick your destination</span>
+          </span>
+          <img src="./assets/destination/image-moon.webp" alt="" srcset="">
+        </section>
+
+        <section class="destination-image-mars">
+          <span class="destination-header">
+            <span class="header-prefix">01</span>
+            <span class="header-text">Pick your destination</span>
+          </span>
+          <img src="./assets/destination/image-mars.webp" alt="" srcset="">
+        </section>
+
+
+        <section class="destination-image-europa">
+          <span class="destination-header">
+            <span class="header-prefix">01</span>
+            <span class="header-text">Pick your destination</span>
+          </span>
+          <img src="./assets/destination/image-europa.webp" alt="" srcset="">
+        </section>
+
+
+        <section class="destination-image-titan">
+          <span class="destination-header">
+            <span class="header-prefix">01</span>
+            <span class="header-text">Pick your destination</span>
+          </span>
+          <img src="./assets/destination/image-titan.webp" alt="" srcset="">
+        </section>
+
+        <article class="crew-article">
+          <section class="part-1"></section>
+          <section class="part-2"></section>
+          <section class="part-3"></section>
+        </article>
+        <article class="crew-article-commander">
+          <span class="crew-header">
+            <span class="header-prefix">02</span>
+            <span class="header-text">Meet your crew</span>
+          </span>
+          <section class="part-1">Commander</section>
+          <section class="part-2">Douglas Hurley</section>
+          <section class="part-3">
+            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+            and former NASA astronaut. He launched into space for the third time as
+            commander of Crew Dragon Demo-2.</section>
+        </article>
+        <article class="crew-article-engineer">
+          <span class="crew-header">
+            <span class="header-prefix">02</span>
+            <span class="header-text">Meet your crew</span>
+          </span>
+          <section class="part-1">Engineer</section>
+          <section class="part-2">Anousheh Ansari</section>
+          <section class="part-3">
+            Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+            Ansari was the fourth self-funded space tourist, the first self-funded woman to
+            fly to the ISS, and the first Iranian in space. </section>
+        </article>
+        <article class="crew-article-pilot">
+          <span class="crew-header">
+            <span class="header-prefix">02</span>
+            <span class="header-text">Meet your crew</span>
+          </span>
+          <section class="part-1">Pilot</section>
+          <section class="part-2">Victor Glover</section>
+          <section class="part-3">
+            Pilot on the first operational flight of the SpaceX Crew Dragon to the
+            International Space Station. Glover is a commander in the U.S. Navy where
+            he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+            station systems flight engineer. </section>
+        </article>
+        <article class="crew-article-specialist">
+          <span class="crew-header">
+            <span class="header-prefix">02</span>
+            <span class="header-text">Meet your crew</span>
+          </span>
+          <section class="part-1">Mission Specialist</section>
+          <section class="part-2"> Mark Shuttleworth</section>
+          <section class="part-3">
+            Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+            the Linux-based Ubuntu operating system. Shuttleworth became the first South
+            African to travel to space as a space tourist.</section>
+        </article>
+
+        <article class="technology-article-vehicle">
+          <span class="technology-header">
+            <span class="header-prefix">03</span>
+            <span class="header-text">Space launch 101</span>
+          </span>
+          <section class="technolgy-card">
+          <section class="technology-menu">
+            <label for="space-1">1
+              <input type="radio" name="technology-menu" id="space-1" checked>
+            </label>
+            <label for="space-2">2
+              <input type="radio" name="technology-menu" id="space-2">
+            </label>
+            <label for="space-3">3
+              <input type="radio" name="technology-menu" id="space-3">
+            </label>
+          </section>
+          <section class="technology-card-info">
+
+          <section class="part-1">
+            The terminology...
+          </section>
+          <section class="part-2">
+            Launch vehicle
+          </section>
+          <section class="part-3">
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+            payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+            WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+            it's quite an awe-inspiring sight on the launch pad!
+          </section>
+        </section>
+      </section>
+        </article>
+        <article class="technology-article-spaceport">
+          <span class="technology-header">
+            <span class="header-prefix">03</span>
+            <span class="header-text">Space launch 101</span>
+          </span>
+          <section class="technolgy-card">
+          <section class="technology-menu">
+            <label for="space-1">1
+              <input type="radio" name="technology-menu" id="space-1" checked>
+            </label>
+            <label for="space-2">2
+              <input type="radio" name="technology-menu" id="space-2">
+            </label>
+            <label for="space-3">3
+              <input type="radio" name="technology-menu" id="space-3">
+            </label>
+          </section>
+          <section class="technology-card-info">
+
+          <section class="part-1">
+            The terminology...
+          </section>
+          <section class="part-2">
+            Spaceport
+          </section>
+          <section class="part-3">
+            A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+  by analogy to the seaport for ships or airport for aircraft. Based in the 
+  famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+  of the Earth’s rotation for launch.
+          </section>
+        </section>
+      </section>
+        </article>
+        <article class="technology-article-capsule">
+          <span class="technology-header">
+            <span class="header-prefix">03</span>
+            <span class="header-text">Space launch 101</span>
+          </span>
+          <section class="technolgy-card">
+          <section class="technology-menu">
+            <label for="space-1">1
+              <input type="radio" name="technology-menu" id="space-1" checked>
+            </label>
+            <label for="space-2">2
+              <input type="radio" name="technology-menu" id="space-2">
+            </label>
+            <label for="space-3">3
+              <input type="radio" name="technology-menu" id="space-3">
+            </label>
+          </section>
+          <section class="technology-card-info">
+
+          <section class="part-1">
+            The terminology...
+          </section>
+          <section class="part-2">
+            Space capsule
+          </section>
+          <section class="part-3">
+            A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+            capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+            you'll spend your time during the flight. It includes a space gym, cinema, 
+            and plenty of other activities to keep you entertained.
+          </section>
+        </section>
+      </section>
+        </article>
+        <section class="crew-menu">
+          <label for="commander">
+            <input type="radio" name="crew-menu" id="commander" checked>
+          </label>
+          <label for="engineer">
+            <input type="radio" name="crew-menu" id="engineer">
+          </label>
+          <label for="pilot">
+            <input type="radio" name="crew-menu" id="pilot">
+          </label>
+          <label for="specialist">
+            <input type="radio" name="crew-menu" id="specialist">
+          </label>
+        </section>
+
+      </section>
+      <section class="b">
+        <section class="destination-menu">
+          <label for="moon">Moon
+            <input type="radio" name="destination-menu" id="moon" checked>
+          </label>
+          <label for="mars">Mars
+            <input type="radio" name="destination-menu" id="mars">
+          </label>
+          <label for="europa">Europa
+            <input type="radio" name="destination-menu" id="europa">
+          </label>
+          <label for="titan">Titan
+            <input type="radio" name="destination-menu" id="titan">
+          </label>
+        </section>
+        <section class="home-aside">
+          Explore
+        </section>
+        <article class="destination-article-moon">
+          <section class="part-1">
+            Moon
+          </section>
+          <section class="part-2">
+
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+            regain perspective and come back refreshed. While you’re there, take in some history
+            by visiting the Luna 2 and Apollo 11 landing sites.
+          </section>
+          <section class="part-3">
+            <section class="detail-left">
+              <section>
+                Avg. distance
+              </section>
+              <section>
+                384,400 km
+              </section>
+            </section>
+            <section class="detail-right">
+              <section>
+                Est. travel time
+              </section>
+              <section>
+                3 days
+              </section>
+            </section>
+          </section>
+        </article>
+
+        <article class="destination-article-mars">
+          <section class="part-1">
+            Mars
+          </section>
+          <section class="part-2">
+            Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
+            the tallest planetary mountain in our solar system. It’s two and a half times
+            the size of Everest!
+          </section>
+          <section class="part-3">
+            <section class="detail-left">
+              <section>
+                Avg. distance
+              </section>
+              <section>
+                225 mil. km
+              </section>
+            </section>
+            <section class="detail-right">
+              <section>
+                Est. travel time
+              </section>
+              <section>
+                9 months
+              </section>
+            </section>
+          </section>
+        </article>
+
+
+
+        <article class="destination-article-europa">
+          <section class="part-1">
+            Europa
+          </section>
+          <section class="part-2">
+            The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+            winter lover’s dream. With an icy surface, it’s perfect for a bit of
+            ice skating, curling, hockey, or simple relaxation in your snug
+            wintery cabin.
+          </section>
+          <section class="part-3">
+            <section class="detail-left">
+              <section>
+                Avg. distance
+              </section>
+              <section>
+                628 mil. km
+              </section>
+            </section>
+            <section class="detail-right">
+              <section>
+                Est. travel time
+              </section>
+              <section>
+                3 years
+              </section>
+            </section>
+          </section>
+        </article>
+
+
+        <article class="destination-article-titan">
+          <section class="part-1">
+            Titan
+          </section>
+          <section class="part-2">
+            The only moon known to have a dense atmosphere other than Earth, Titan
+            is a home away from home (just a few hundred degrees colder!). As a
+            bonus, you get striking views of the Rings of Saturn.
+          </section>
+          <section class="part-3">
+            <section class="detail-left">
+              <section>
+                Avg. distance
+              </section>
+              <section>
+                1.6 bil. km
+              </section>
+            </section>
+            <section class="detail-right">
+              <section>
+                Est. travel time
+              </section>
+              <section>
+                7 years
+              </section>
+            </section>
+          </section>
+        </article>
+
+
+        <section class="crew-image-commander">
+          <img src="./assets/crew/image-douglas-hurley.png" width="514" height="700" alt="Image commander Douglas Hurley" srcset="">
+        </section>
+
+        <section class="crew-image-engineer">
+          <img src="./assets/crew/image-anousheh-ansari.webp" width=
+          "575px" height="602px" alt="Picture of Engineeer 
+          Anousheh Ansari " srcset="">
+        </section>
+
+        <section class="crew-image-pilot">
+          <img src="./assets/crew/image-victor-glover.webp" width="549px" height="645px" alt="" srcset="">
+        </section>
+
+        <section class="crew-image-specialist">
+          <img src="./assets/crew/image-mark-shuttleworth.webp" width="433px" height="640px" alt="" srcset="">
+        </section>
+
+
+        <section class="technology-image-capsule">
+          <img src="./assets/technology/image-space-capsule-portrait.jpg" alt="Image of a space capsule"  width="515px" height="527px">
+        </section>
+        <section class="technology-image-spaceport">
+          <img src="./assets/technology/image-spaceport-portrait.jpg" alt="Image of a spaceport"  width="515px" height="527px">
+        </section>
+        <section class="technology-image-vehicle">
+          <img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="Image of a vechicle" width="515px" height="527px">
+        </section>
+      </section>
+    </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/MaudePod">Maude Pod</a>.
+    </div>
+  </main>
+
+</body>
+
+</html>
+<svg id="svgs">
+  <symbol viewBox="0 0 48 48" id="logo">
+    <g fill="none" fill-rule="evenodd" width="48" height="48">
+      <circle cx="24" cy="24" r="24" fill="#FFF" />
+      <path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 24 21" id="hamburger">
+    <g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g>
+  </symbol>
+  <symbol viewBox="0 0 20 21" id="close">
+    <g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g>
+  </symbol>
+</svg>
